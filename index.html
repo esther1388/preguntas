@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- Your app title -->
+    <title>Preguntas</title>
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+</head>
+
+<body>          
+            <nav>
+                <div class="nav-wrapper">
+                  <a class="brand-logo">Preguntas nivel 1</a>
+
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">| Preguntas nivel 1 |</a></li>
+                    <li><a href="dos.html">| Preguntas nivel 2 |</a></li>
+                    <li><a href="tres.html">| Preguntas nivel 3 |</a></li>
+                    <li><a href="cuatro.html">| Preguntas nivel 4 |</a></li>
+                    <li><a href="cinco.html">| Preguntas nivel 5 |</a></li>
+                  </ul>
+                </div>
+            </nav>
+
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+            <div class="page-content">
+            <div class="content-block">
+
+            <script language="JavaScript">
+                                  
+            var pregunta1 = "0"; 
+            var pregunta2 = "0"; 
+            var pregunta3 = "0"; 
+            var pregunta4 = "0"; 
+            var pregunta5 = "0"; 
+             
+            function respuesta1(valor) 
+            {pregunta1 = valor}; 
+            function respuesta2(valor) 
+            {pregunta2 = valor}; 
+            function respuesta3(valor) 
+            {pregunta3 = valor}; 
+            function respuesta4(valor) 
+            {pregunta4 = valor}; 
+            function respuesta5(valor) 
+            {pregunta5 = valor}; 
+
+            </script>
+
+            <script language="JavaScript" type="text/JavaScript">
+            function MM_reloadPage(init) { 
+              if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+                document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+              else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+            }
+            MM_reloadPage(true);
+            </script>
+
+        <script language="JavaScript">
+
+        function examinar() 
+        { 
+        puntuacion=0; 
+        nocontesta=0; 
+        contestadas=0; 
+        puntosmaximos=0; 
+
+        if(pregunta1!= "0" )
+        {
+          contestadas=contestadas+1
+          puntosmaximos=puntosmaximos+2
+          if(pregunta1 == "A") {puntuacion=puntuacion+2}
+          if(pregunta1 == "B") {puntuacion=puntuacion+0}
+          if(pregunta1 == "C") {puntuacion=puntuacion+0}
+          
+        }
+        else {nocontesta=nocontesta+1} 
+
+        if(pregunta2 != "0")
+        {
+          contestadas=contestadas+1
+          puntosmaximos=puntosmaximos+2
+          if(pregunta2 == "A") {puntuacion=puntuacion+0}
+          if(pregunta2 == "B") {puntuacion=puntuacion+2}
+          if(pregunta2 == "C") {puntuacion=puntuacion+0}
+          
+        }
+        else {nocontesta=nocontesta+1}
+
+        if(pregunta3!= "0" )
+        {
+          contestadas=contestadas+1
+          puntosmaximos=puntosmaximos+2
+          if(pregunta3 == "A") {puntuacion=puntuacion+0}
+          if(pregunta3 == "B") {puntuacion=puntuacion+0}
+          if(pregunta3 == "C") {puntuacion=puntuacion+2}
+
+        }
+        else {nocontesta=nocontesta+1} 
+
+        if(pregunta4 != "0")
+        {
+          contestadas=contestadas+1
+          puntosmaximos=puntosmaximos+2
+          if(pregunta4 == "A") {puntuacion=puntuacion+2}
+          if(pregunta4 == "B") {puntuacion=puntuacion+0}
+          if(pregunta4 == "C") {puntuacion=puntuacion+0}
+        }
+        else {nocontesta=nocontesta+1}
+
+        if(pregunta5!= "0" ){
+          contestadas=contestadas+1
+          puntosmaximos=puntosmaximos+2
+          if(pregunta5 == "A") {puntuacion=puntuacion+0}
+          if(pregunta5 == "B") {puntuacion=puntuacion+2}
+          if(pregunta5 == "C") {puntuacion=puntuacion+0}
+          
+        }
+        else {nocontesta=nocontesta+1} 
+
+        if (puntosmaximos!=0) 
+        {indiceacierto=Math.round(10*(puntuacion/puntosmaximos))
+        } 
+        else{indiceacierto=0} 
+
+        if(contestadas==0)
+        {
+        mensaje="Sin contestar"} 
+
+        alert("Calificación final es de  "+puntuacion)
+        alert("Las respuestas correctas eran: 1) A, 2) B, 3)C, 4) A, 5)C") 
+        }
+
+        </script>
+
+        <h5>1. ¿Cuál es la raíz cuadrada de 25?</h5>
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta1" type="radio" value="A" onclick="respuesta1('A')"/>
+        <span>5</span>
+        </label>
+        </p>
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta1" type="radio" value="B" onclick="respuesta1('B')"/>
+        <span>15</span>
+        </label>
+        </p>
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta1" type="radio" value="C" onclick="respuesta1('C')"/>
+        <span>20</span>
+        </label>
+        </p>
+      
+       <h5>2. ¿Cuál es la derivada de x?</h5>
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta2" type="radio" value="A" onclick="respuesta2('A')"/>
+        <span>0</span>
+        </label>
+        </p>
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta2" type="radio" value="B" onclick="respuesta2('B')"/>
+        <span>1</span>
+        </label>
+        </p>
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta2" type="radio" value="C" onclick="respuesta2('C')"/>
+        <span>2</span>
+        </label>
+        </p>
+        <h5>3. ¿Cuánto es 5*5-5?</h5>
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta3" type="radio" value="A" onclick="respuesta3('A')"/>
+        <span>30</span>
+        </label>
+        </p>
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta3" type="radio" value="B" onclick="respuesta3('B')"/>
+        <span>25</span>
+        </label>
+        </p>
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta3" type="radio" value="C" onclick="respuesta3('C')"/>
+        <span>20</span>
+        </label>
+        </p>
+                      
+        <h5>4. ¿Cuánto es 6*6?</h5>
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta4" type="radio" value="A" onclick="respuesta4('A')"/>
+        <span>36</span>
+        </label>
+        </p>
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta4" type="radio" value="B" onclick="respuesta4('B')"/>
+        <span>30</span>
+        </label>
+        </p>
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta4" type="radio" value="C" onclick="respuesta4('C')"/>
+        <span>6</span>
+        </label>
+        </p>             
+ 
+        <h5>5. ¿Qué es la literal de una expreción?</h5>
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta5" type="radio" value="A" onclick="respuesta5('A')"/>
+        <span>El número</span>
+        </label>
+        </p> 
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta5" type="radio" value="B" onclick="respuesta5('B')"/>
+        <span>La letra</span>
+        </label>
+        </p> 
+
+        <p>
+        <label>
+        <input class="with-gap" name="pregunta5" type="radio" value="C" onclick="respuesta5('C')"/>
+        <span>El exponente</span>
+        </label>
+        </p>                                                  
+
+        <button type="submit" name="action" onclick="examinar()">Resultados</button>  
+
+        <p>jkdn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
